@@ -1,24 +1,15 @@
-# Employee Management Syste
+# Employee Management System
 
 A complete, professional web-based Employee Management System built with PHP and MySQL. This system provides comprehensive employee data management with secure authentication, role-based access control, and full CRUD operations.
 
 ## 👥 Group Members
    
       Class BIT29-A
-1. Mohamed Ali Ahmed                   IT22129108
-2. Fuad Abdikarin Maalin Abukar        IT22129086
-3. Abdirahman Mohamed Ahmed            IT22129041
+1. Mohamed Ali Ahmed                   
+2. Fuad Abdikarin Maalin Abukar        
+3. Abdirahman Mohamed Ahmed           
 
 
-## 📋 Table of Contents
-- [Features](#features)
-- [Technology Stack](#technology-stack)
-- [Installation](#installation)
-- [Database Setup](#database-setup)
-- [Default Credentials](#default-credentials)
-- [Usage Guide](#usage-guide)
-- [Security Features](#security-features)
-- [Contributing](#contributing)
 
 ## ✨ Features
 
@@ -70,95 +61,7 @@ A complete, professional web-based Employee Management System built with PHP and
 - MySQL 5.7 or higher
 - Web browser (Chrome, Firefox, Edge, Safari)
 
-### Step-by-Step Installation
 
-1. **Clone the repository** (or download ZIP)
-   ```bash
-   git clone <your-repository-url>
-   ```
-
-2. **Move to XAMPP htdocs**
-   ```
-   Copy the "Employee Management System" folder to:
-   C:\xampp\htdocs\
-   ```
-
-3. **Start XAMPP Services**
-   - Open XAMPP Control Panel
-   - Start Apache
-   - Start MySQL
-
-4. **Continue to Database Setup** (see next section)
-
-## 🗄️ Database Setup
-
-### Method 1: Using phpMyAdmin (Recommended)
-
-1. Open phpMyAdmin:
-   - Navigate to `http://localhost:81/phpmyadmin` (or `http://localhost/phpmyadmin` if using default port)
-   
-2. Import the database:
-   - Click on "Import" tab
-   - Click "Choose File"
-   - Select: `Employee Management System/database/ems_database.sql`
-   - Click "Go" button at the bottom
-   
-3. Verify:
-   - You should see `ems_database` in the left sidebar
-   - Click on it to see the tables: `users`, `employees`, `departments`, `activity_logs`, `site_content`
-
-### Method 2: Using MySQL Command Line
-
-```bash
-cd C:\xampp\mysql\bin
-mysql -u root -p
-```
-
-Then run:
-```sql
-source "C:/xampp/htdocs/Employee Management System/database/ems_database.sql";
-```
-
-## 🔑 Default Credentials
-
-After importing the database, you can login with:
-
-**Admin Account:**
-- Username: `admin`
-- Password: `admin123`
-
-**Test HR Account:**
-- Username: `johndoe`
-- Password: `admin123`
-
-**Test Manager Account:**
-- Username: `janesmith`
-- Password: `admin123`
-
-**Test Employee Account:**
-- Username: `mikejohnson`
-- Password: `admin123`
-
-> ⚠️ **Important**: Change the admin password immediately after first login in a production environment!
-
-## 📖 Usage Guide
-
-### Accessing the System
-
-1. **Public Homepage**
-   ```
-   http://localhost/Employee Management System/
-   ```
-
-2. **Login Page**
-   ```
-   http://localhost/Employee Management System/auth/login.php
-   ```
-
-3. **Registration Page**
-   ```
-   http://localhost/Employee Management System/auth/register.php
-   ```
 
 ### Common Tasks
 
@@ -182,42 +85,6 @@ After importing the database, you can login with:
 4. User status will update immediately
 
 
-## 🔐 Security Features
-
-### Implemented Security Measures
-
-1. **Password Security**
-   - bcrypt hashing (cost factor: 10)
-   - Minimum password length enforcement
-   - No plain-text storage
-
-2. **Database Security**
-   - PDO with prepared statements
-   - SQL injection prevention
-   - Parameterized queries
-
-3. **Session Security**
-   - Secure session configuration
-   - Session ID regeneration
-   - Automatic timeout (5 minutes)
-   - Activity-based session refresh
-
-4. **File Upload Security**
-   - File type validation
-   - File size restrictions (5MB max)
-   - No PHP execution in uploads directory
-   - Unique filename generation
-
-5. **Input Validation**
-   - Server-side validation
-   - Client-side validation
-   - XSS prevention (htmlspecialchars)
-   - CSRF token protection
-
-6. **Access Control**
-   - Role-based permissions
-   - Authentication checks on all protected pages
-   - User status verification
 
 ## 🧪 Testing the System
 
@@ -235,27 +102,6 @@ After importing the database, you can login with:
 - [ ] Upload profile pictures
 - [ ] Test logout functionality
 - [ ] Verify activity logs
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**Issue: Database connection failed**
-- Solution: Check `config/config.php` database credentials
-- Verify MySQL is running in XAMPP
-
-**Issue: Session expired immediately**
-- Solution: Check folder permissions for session storage
-- Ensure `session.save_path` is writable
-
-**Issue: Profile pictures not uploading**
-- Solution: Check `uploads/profiles/` folder exists and is writable
-- Verify file permissions (755 or 777)
-
-**Issue: Page shows blank/white screen**
-- Solution: Enable error reporting in `config/config.php`
-- Check PHP error logs in XAMPP
-
 
 ## 📄 License
 
